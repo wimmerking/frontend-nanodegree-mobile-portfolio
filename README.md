@@ -4,7 +4,14 @@ Your challenge, if you wish to accept it (and we sure hope you will), is to opti
 
 To get started, check out the repository, inspect the code,
 
-### Getting started
+To view this project:
+
+* run a local server
+
+$> cd /path/to/your-project-folder
+$> python -m SimpleHTTPServer 8080
+
+* visit localhost:8080 OR use ngrok to host it and make the local server accessible remotely.
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
 
