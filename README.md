@@ -31,6 +31,12 @@ changed random pizza container
 
 improved updatepositions function to improve speed
 
+refactored update positions to retain original functionality
+
+modified for loop to make sure background pizzas fill screen and necesary var outside of loop
+
+
+
 
 
 ### Customization with Bootstrap
