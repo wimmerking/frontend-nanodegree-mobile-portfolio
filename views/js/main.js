@@ -515,20 +515,20 @@ function updatePositions() {
         frame++;
         window.performance.mark("mark_start_frame");
         var items = document.getElementsByClassName('mover');
-        //store the scrollTop value so that it is faster to access it.
+        //store the scrollTop value so that it is faster to access it. also modified math to complete changes
         var top = document.body.scrollTop / 1250;
         var phase = [];
-        for (var i = 0; i < 6; i++) {
-            phase[i] = 100 * Math.sin((top) + (i % 5)) - 1250;
+               for (var i = 0; i < 5; i++) {
+            phase[i] = 100 * Math.sin(top + (i % 5))
         }
         //Declaring variables outside of the loop to keep it as short as possible.
         var itemLength = items.length;
         var f = 0;
         var move;
-        //switching to pizza movement to transform to save on time
+        //modified to retain original UX and fill screen
         for (var i = 0; i < itemLength; i++) {
             move = items[i].basicLeft + phase[f] + 'px';
-            items[i].style.transform = 'translateX(' + move + ')';
+            items[i].style.transform = 'translateX(' + phase[i % 5] + 'px )';
             f++;
             if (f > 5) {
                 f = 0;
@@ -557,7 +557,7 @@ document.addEventListener('DOMContentLoaded', function() {
         elem.src = "images/pizza.png";
         elem.style.height = "100px";
         elem.style.width = "73.333px";
-        elem.basicLeft = (i % cols) * s;
+        elem.style.left = (i % cols) * s + 'px';
         elem.style.top = (Math.floor(i / cols) * s) + 'px';
         document.querySelector("#movingPizzas1").appendChild(elem);
     }
