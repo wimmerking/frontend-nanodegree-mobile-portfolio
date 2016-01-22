@@ -35,6 +35,12 @@ refactored update positions to retain original functionality
 
 modified for loop to make sure background pizzas fill screen and necesary var outside of loop
 
+made suggested changes to use faster getElementByid instead of querySelector
+
+declared variables outside of loops to call only once
+
+deleted some trailing space
+
 
 
 
